@@ -1,0 +1,30 @@
+@import '../../../../../assets/variables' ;
+
+.example-form{
+    display: flex;
+    flex-direction: column;
+    padding: $pl;
+    @media #{$tablet} {
+    padding: $pt;  
+    }
+    @media #{$desktop-sm} {
+    padding: $pm;  
+    }
+    .mat-form-field{
+        min-height: 80px;
+    }
+   .button-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 20px;
+      }
+}
+span{
+    color :red;
+    font-size: $xxs;
+    
+}
+.has_error_box{
+position: absolute;
+}

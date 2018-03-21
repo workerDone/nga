@@ -1,0 +1,14 @@
+@import '../../../../../assets/variables' ;
+
+.cont{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    &_block{
+        position: absolute;
+        background-color: rgba($tw, 0.7);
+        border-radius: $br;
+        border: $b;
+        box-shadow: $bs;
+    }
+}
