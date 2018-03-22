@@ -13,3 +13,11 @@ export class RoutePaths {
     static terms = 'terms-conditions';
     static information = 'information';
   }
+  export class RouteUserPaths {
+    static dashboard = 'dashboard';
+    static contribution = 'contribution';
+    static verification = 'verification';
+    static history = 'history';
+    static referralSystem = 'referral-system';
+    static faq = 'faq'
+  }

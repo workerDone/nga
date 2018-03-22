@@ -11,7 +11,7 @@ const routes: Routes = [
     loadChildren: 'app/pages/login/login.module#LoginModule'
   },
   {
-    path: RoutePaths.success,
+    path: RoutePaths.user,
     // canActivate: [LoginGuard],
     // canLoad: [LoginGuard],
     loadChildren: 'app/pages/success/success.module#SuccessModule'
