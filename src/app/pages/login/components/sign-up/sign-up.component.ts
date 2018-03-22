@@ -39,9 +39,7 @@ export class SignUpComponent implements OnInit {
     });
   }
   register() {
-    console.log('hello')
     if (this.form.valid ){
-    console.log('hello2')
       const user = JSON.stringify(this.form.value)
       localStorage.setItem( 'users', user )
     }

@@ -1,6 +1,6 @@
 @import '../../../../../assets/variables' ;
 
-.example-form{
+._form{
     display: flex;
     flex-direction: column;
     padding: $pl;
@@ -9,6 +9,9 @@
     }
     @media #{$desktop-sm} {
     padding: $pm;  
+    }
+    &_p{
+        text-align: center;
     }
     .mat-form-field{
         min-height: 80px;

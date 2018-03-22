@@ -16,6 +16,6 @@ export class AppComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.navigationService.success()
+    // this.navigationService.success()
   }
 }

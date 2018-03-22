@@ -1,4 +1,5 @@
-<form class="example-form _wi_" novalidate [formGroup]="form" (ngSubmit)='register()'>
+<form class="_form _wi_" novalidate [formGroup]="form" (ngSubmit)='register()'>
+  <p class="_form_p" >Sign Up</p>
   <mat-form-field class="example-full-width">
     <input matInput placeholder="Middle name" formControlName="name">
     <div class="validation-err-msg" *ngIf="form.get('name').touched">
@@ -101,8 +102,6 @@
 </form>
 <mat-toolbar color="primary">
   <mat-toolbar-row>
-    <!-- <span>Log In</span> -->
-
     <span class="example-spacer"></span>
     
     <button mat-button>About</button>
