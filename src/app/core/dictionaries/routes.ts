@@ -1,4 +1,6 @@
 export class RoutePaths {
+    static in = 'in';
+    static up = 'up';
     static user = 'user';
     static admin = 'admin';
     static login = 'login';

@@ -1,45 +1,52 @@
 <div class="_top">
-  <button mat-button  routerLinkActive="active" >
-    <a routerLink="/login"  >
+  <button mat-button  [routerLinkActiveOptions]="{ exact: true }"  routerLinkActive="active">
+    <a routerLink="/">
       <i class="icon-Dashboard"></i>
+      <mat-icon>whatshot</mat-icon>
       Your life
     </a>
   </button>
   <button mat-button routerLinkActive="active">
-    <a routerLink="/success" >
-      <i class="icon-Dashboard"></i>
+    <a routerLink="login/sign-up">
+      <mat-icon>assessment</mat-icon>
       Dashboard
     </a>
   </button>
   <button mat-button>
     <a routerLink="/user/contribution" routerLinkActive="primary">
-
-      <i class="icon-Contribution"></i>
+      <mat-icon>android </mat-icon>
       Contribution
     </a>
   </button>
   <button mat-button>
     <a routerLink="/user/verification" routerLinkActive="primary">
-      <i class="icon-Investors"></i>
+      <mat-icon>person </mat-icon>
       Verification
     </a>
   </button>
   <button mat-button>
     <a routerLink="/user/history" routerLinkActive="primary">
-      <i class="icon-Transactions"></i>
+      <mat-icon>dialpad</mat-icon>
       History
     </a>
   </button>
   <button mat-button>
     <a routerLink="/user/referral-system" routerLinkActive="primary">
-      <i class="icon-system"></i>
+      <mat-icon>redeem </mat-icon>
       Referral System
     </a>
   </button>
   <button mat-button>
     <a routerLink="/user/faq" routerLinkActive="primary">
-      <i class="icon-FQA"></i>
+      <mat-icon>build </mat-icon>
       FAQ
+    </a>
+  </button>
+
+  <button mat-button [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active">
+    <a routerLink="/login/in">
+      <mat-icon>refresh </mat-icon>
+      Log out
     </a>
   </button>
 </div>

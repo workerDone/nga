@@ -1,5 +1,5 @@
 <form class="_form _wi_" novalidate [formGroup]="form" (ngSubmit)='register()'>
-  <p class="_form_p" >Sign Up</p>
+  <p class="_form_p">Sign Up</p>
   <mat-form-field class="example-full-width">
     <input matInput placeholder="Middle name" formControlName="name">
     <div class="validation-err-msg" *ngIf="form.get('name').touched">
@@ -30,35 +30,34 @@
     <div class="has-error" *ngIf="form.get('password').invalid
     && form.get('password').touched">
 
-    <div class="validation-err-msg">
-      <span *ngIf="form.get('password').hasError('uppercaseLetters')
+      <div class="validation-err-msg">
+        <span *ngIf="form.get('password').hasError('uppercaseLetters')
         && form.get('password').hasError('numbers')">
-        Password must contain at least one uppercase letter and one number.
-      </span>
+          Password must contain at least one uppercase letter and one number.
+        </span>
 
-      <span *ngIf="form.get('password').hasError('uppercaseLetters')
+        <span *ngIf="form.get('password').hasError('uppercaseLetters')
         && !form.get('password').hasError('numbers')">
-        Password must contain at least one uppercase letter.
-      </span>
+          Password must contain at least one uppercase letter.
+        </span>
 
-      <span *ngIf="!form.get('password').hasError('uppercaseLetters')
+        <span *ngIf="!form.get('password').hasError('uppercaseLetters')
         && form.get('password').hasError('numbers')">
-        Password must contain at least one number.
-      </span>
+          Password must contain at least one number.
+        </span>
 
-      <span *ngIf="form.get('password').hasError('minlength')">
-        Password must be of minimum 6 characters length.
-      </span>
+        <span *ngIf="form.get('password').hasError('minlength')">
+          Password must be of minimum 6 characters length.
+        </span>
+      </div>
     </div>
-  </div>
   </mat-form-field>
-  
+
 
   <mat-form-field class="example-full-width">
-    <input matInput placeholder="Password"
-     type="password" formControlName="retry_password">
+    <input matInput placeholder="Password" type="password" formControlName="retry_password">
 
-      <div class="has_error" *ngIf="form.get('retry_password').invalid
+    <div class="has_error" *ngIf="form.get('retry_password').invalid
       && form.get('retry_password').touched">
 
       <div class="validation-err-msg">
@@ -83,12 +82,10 @@
       </div>
     </div>
   </mat-form-field>
-  
+
 
   <section class="example-section">
-    <mat-checkbox class="example-margin " color="primary"
-    formControlName="checkbox_agree"
-    >Checked</mat-checkbox>
+    <mat-checkbox class="example-margin " color="primary" formControlName="checkbox_agree"> I Agree To Terms & Conditions</mat-checkbox>
   </section>
   <div class="has-error" *ngIf="form.get('checkbox_agree').invalid
         && form.get('checkbox_agree').touched">
@@ -97,13 +94,11 @@
     </span>
   </div>
   <div class="button-row " color="primary">
-    <button mat-raised-button color="primary" >Basic</button>
+    <button mat-raised-button color="primary">Register</button>
   </div>
 </form>
 <mat-toolbar color="primary">
   <mat-toolbar-row>
-    <span class="example-spacer"></span>
-    
     <button mat-button>About</button>
     <button mat-button>Services</button>
     <button mat-button>Contact</button>

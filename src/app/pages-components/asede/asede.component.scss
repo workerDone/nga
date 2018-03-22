@@ -4,4 +4,9 @@
     justify-content: space-between;
     width: 100%;
     min-height: 100%;
+    &_down{
+        a{
+            text-decoration: none;
+        }
+    }
 }

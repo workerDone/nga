@@ -1,34 +1,37 @@
+<div class="_hr">
 
-<div class="_hr" style="position:absolute;top:0;left:0;right:0;bottom:0;">
-       
-    <mat-sidenav-container #sidenav style="height:100%;width:100%;">
-      <mat-sidenav mode="over" #sidenav style="min-width:220px;">
+  <mat-sidenav-container #sidenav class="_hr_sn">
+    <mat-sidenav mode="over" #sidenav class="_hr_sn_c">
+      <app-asede>
+        <app-asede-items></app-asede-items>
+      </app-asede>
+    </mat-sidenav>
 
-        <app-asede>
-                <app-asede-items></app-asede-items>
-        </app-asede> 
-        
-      </mat-sidenav>
-      <mat-toolbar color="primary"  style="min-height:64px;">
-        <span>
-            <button style="background-color:transparent;border-style:none;cursor:pointer; display: flex; align-items: center;" (click)="sidenav.open()">
-                <mat-icon style="color:white; font-size: 30px;" >menu</mat-icon>
-            </button>
-        </span>
-        <div>
-          <button mat-button >  
-            <a routerLink="/login">Sign Un</a>
-          </button>
-        </div>
-      <span>Fixed Header Example</span>
-      </mat-toolbar>
-      <div class="inner-sidenav-content">
-        <div style="padding-top:2em;padding-bottom:2em;">
-                <router-outlet></router-outlet>
-        </div>
+    <mat-toolbar color="primary" class="_hr_sn_tb">
+      <div class="_hr_sn_tb_d">
+        <button class="_hr_sn_tb_d_ib" (click)="sidenav.open()">
+          <mat-icon class="_hr_sn_tb_d_ib_i">menu</mat-icon>
+        </button>
       </div>
-    </mat-sidenav-container>
-   
-  </div>
-  
-  
+
+      <div class="_hr_sn_tb_e">
+        <a routerLink="/login/in" routerLinkActive="active">
+          <button mat-button>
+            Log In
+          </button>
+        </a>
+        <a routerLink="/login/up" routerLinkActive="active" >
+          <button mat-button>
+            Sign Up
+          </button>
+        </a>
+      </div>
+    </mat-toolbar>
+    <div class="inner-sidenav-content">
+      <div style="padding-top:2em;padding-bottom:2em;">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </mat-sidenav-container>
+
+</div>
