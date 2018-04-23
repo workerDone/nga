@@ -44,7 +44,7 @@ export class SignUpComponent implements OnInit {
     if (this.form.valid ) {
       const {name, email, password} = this.form.value;
       // console.log(this.form)
-      this.http.post('http://localhost:3000/registration', {'name': name, 'email': email, 'password': password} )
+      this.http.post('https://app-phone-app.herokuapp.com/registration', {'name': name, 'email': email, 'password': password} )
       .subscribe(data => {
         console.log(data);
       })
