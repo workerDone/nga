@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators  } from '@angular/forms';
 import { Observable } from 'rxjs/Rx';
 import { ActivatedRoute } from "@angular/router";
+import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
 
 import { NavigationService } from '../../../../services'
 import {
@@ -18,6 +19,7 @@ export class SignUpComponent implements OnInit {
   form: FormGroup;
   constructor(
     private formBuilder: FormBuilder,
+    private http: HttpClient,
     // private authService: AuthService,
     private route: ActivatedRoute,    
     private navigationService: NavigationService
@@ -39,7 +41,13 @@ export class SignUpComponent implements OnInit {
     });
   }
   register() {
-    if (this.form.valid ){
+    if (this.form.valid ) {
+      const {name, email, password} = this.form.value;
+      // console.log(this.form)
+      this.http.post('http://localhost:3000/registration', {'name': name, 'email': email, 'password': password} )
+      .subscribe(data => {
+        console.log(data);
+      })
       const user = JSON.stringify(this.form.value)
       localStorage.setItem( 'users', user )
     }
