@@ -5,5 +5,5 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'https://app-phone-app.herokuapp.com/'
+  // apiUrl: 'https://app-phone-app.herokuapp.com/'
 };

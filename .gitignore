@@ -34,7 +34,7 @@ npm-debug.log
 yarn-error.log
 testem.log
 /typings
-
+/node_modules
 # e2e
 /e2e/*.js
 /e2e/*.map
@@ -43,6 +43,7 @@ testem.log
 .DS_Store
 Thumbs.db
 # firebase
-/function
-.firebase
+/functions
+
+.firebaserc
 .firebase.json
