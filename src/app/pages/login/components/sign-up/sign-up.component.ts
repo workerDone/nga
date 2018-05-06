@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators  } from '@angular/forms';
-import { Observable } from 'rxjs/Rx';
-import { ActivatedRoute } from "@angular/router";
+import { Observable } from 'rxjs/Observable';
+import { ActivatedRoute } from '@angular/router';
 import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
-
-import { NavigationService } from '../../../../services'
+import {action, computed, observable } from 'mobx-angular';
+import { NavigationService } from '../../../../services';
 import {
   uppercaseValidator, numbersValidator,
   emailValidator, markAsTouchedAllFormInputs
@@ -43,7 +43,6 @@ export class SignUpComponent implements OnInit {
   register() {
     if (this.form.valid ) {
       const {name, email, password} = this.form.value;
-      // console.log(this.form)
       this.http.post('https://app-phone-app.herokuapp.com/registration', {'name': name, 'email': email, 'password': password} )
       .subscribe(data => {
         console.log(data);

@@ -4,7 +4,7 @@ export class RoutePaths {
     static user = 'user';
     static admin = 'admin';
     static login = 'login';
-    static success = 'success'
+    static success = 'success';
     static confirmEmail = 'confirm-email';
     static resetPassword = 'reset-password';
     static forgotPassword = 'forgot-password';
@@ -19,5 +19,5 @@ export class RoutePaths {
     static verification = 'verification';
     static history = 'history';
     static referralSystem = 'referral-system';
-    static faq = 'faq'
+    static faq = 'faq';
   }

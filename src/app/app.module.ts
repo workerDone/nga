@@ -11,7 +11,7 @@ import { ReactiveFormsModule } from '@angular/forms'
 import { AppComponent } from './app.component';
 import { AsedeComponent } from './pages-components/asede/asede.component';
 import { AsedeItemsComponent } from './pages-components/asede-items/asede-items.component';
-
+import { MobxAngularModule } from 'mobx-angular';
 
 @NgModule({
   declarations: [
@@ -25,7 +25,8 @@ import { AsedeItemsComponent } from './pages-components/asede-items/asede-items.
     AppRoutingModule,
     MaterialModule,
     ReactiveFormsModule,
-    ServicesModule.forRoot()
+    ServicesModule.forRoot(),
+    MobxAngularModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -11,6 +11,7 @@ import { MaterialModule } from '../../material/material.module'
 import { ParticlesModule } from 'angular-particle';
 import { LogInComponent } from './components/log-in/log-in.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { MobxAngularModule } from 'mobx-angular';
 
 @NgModule({
   imports: [
@@ -19,7 +20,8 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
     ParticlesModule,
     ReactiveFormsModule,
     LoginRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    MobxAngularModule,
   ],
   declarations: [
     LoginPageComponent,
