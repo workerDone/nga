@@ -17,11 +17,13 @@ import {
 })
 export class SignUpComponent implements OnInit {
   form: FormGroup;
+  @observable
+  numObservable: number = null;
   constructor(
     private formBuilder: FormBuilder,
     private http: HttpClient,
     // private authService: AuthService,
-    private route: ActivatedRoute,    
+    private route: ActivatedRoute,
     private navigationService: NavigationService
   ) { }
 
@@ -40,16 +42,26 @@ export class SignUpComponent implements OnInit {
       checkbox_agree: [false, [Validators.required, Validators.pattern('true')]]
     });
   }
+
   register() {
     if (this.form.valid ) {
       const {name, email, password} = this.form.value;
       this.http.post('https://app-phone-app.herokuapp.com/registration', {'name': name, 'email': email, 'password': password} )
       .subscribe(data => {
         console.log(data);
-      })
-      const user = JSON.stringify(this.form.value)
-      localStorage.setItem( 'users', user )
+      });
+      const user = JSON.stringify(this.form.value);
+      localStorage.setItem( 'users', user );
     }
-  
   }
+  @action
+  moveNumObservable( value: number ): void {
+    this.numObservable = value;
+  }
+
+  @computed
+  get num(): number {
+    return this.numObservable;
+  }
+
 }
