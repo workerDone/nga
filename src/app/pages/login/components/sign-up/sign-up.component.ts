@@ -16,9 +16,11 @@ import {
   styleUrls: ['./sign-up.component.scss']
 })
 export class SignUpComponent implements OnInit {
+
   form: FormGroup;
-  @observable
-  numObservable: number = null;
+
+  @observable numObservable: number = null;
+
   constructor(
     private formBuilder: FormBuilder,
     private http: HttpClient,
@@ -54,14 +56,12 @@ export class SignUpComponent implements OnInit {
       localStorage.setItem( 'users', user );
     }
   }
-  @action
-  moveNumObservable( value: number ): void {
+
+  @action moveNumObservable(value: number): void {
     this.numObservable = value;
   }
 
-  @computed
-  get num(): number {
+  @computed get num(): number {
     return this.numObservable;
   }
-
 }
