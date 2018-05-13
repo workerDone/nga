@@ -16,6 +16,12 @@ const routes: Routes = [
     // canLoad: [LoginGuard],
     loadChildren: 'app/pages/user/user.module#UserModule'
   },
+  {
+    path: RoutePaths.user,
+    // canActivate: [LoginGuard],
+    // canLoad: [LoginGuard],
+    loadChildren: 'app/pages/user/user.module#UserModule'
+  },
 ];
 
 @NgModule({
