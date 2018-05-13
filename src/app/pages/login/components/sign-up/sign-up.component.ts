@@ -10,6 +10,7 @@ import {
   emailValidator, markAsTouchedAllFormInputs
 } from '../../../../helpers';
 
+
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.component.html',

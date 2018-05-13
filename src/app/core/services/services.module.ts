@@ -1,13 +1,10 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
-  // ApiService,
+  ApiService,
   // JwtService,
   NavigationService,
   // SettingsService,
-  // UserService,
-  // AuthService,
-  // ContributionsService
 } from '.';
 
 @NgModule({
@@ -22,6 +19,7 @@ export class ServicesModule {
       ngModule: ServicesModule,
       providers: [
         NavigationService,
+        ApiService,
       ]
     };
   }
