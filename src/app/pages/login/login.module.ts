@@ -23,12 +23,14 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
     LoginRoutingModule,
     HttpClientModule,
     MobxAngularModule,
-    LoginService,
   ],
   declarations: [
     LoginPageComponent,
     LogInComponent,
     SignUpComponent,
+  ],
+  providers: [
+    LoginService,
   ]
 })
 export class LoginModule { }
