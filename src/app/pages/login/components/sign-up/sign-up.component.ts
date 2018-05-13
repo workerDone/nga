@@ -4,6 +4,8 @@ import { Observable } from 'rxjs/Observable';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
 import {action, computed, observable } from 'mobx-angular';
+
+import { LoginService } from '../../services/login-services/login.service';
 import { NavigationService } from '../../../../core/services';
 import {
   uppercaseValidator, numbersValidator,
@@ -25,7 +27,7 @@ export class SignUpComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private http: HttpClient,
-    // private authService: AuthService,
+    private loginService: LoginService,
     private route: ActivatedRoute,
     private navigationService: NavigationService
   ) { }
@@ -58,11 +60,11 @@ export class SignUpComponent implements OnInit {
     }
   }
 
-  @action moveNumObservable(value: number): void {
-    this.numObservable = value;
-  }
+  // @action moveNumObservable(value: number): void {
+  //   this.numObservable = value;
+  // }
 
-  @computed get num(): number {
-    return this.numObservable;
-  }
+  // @computed get num(): number {
+  //   return this.numObservable;
+  // }
 }
