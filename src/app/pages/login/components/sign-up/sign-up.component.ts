@@ -4,7 +4,7 @@ import { Observable } from 'rxjs/Observable';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
 import {action, computed, observable } from 'mobx-angular';
-import { NavigationService } from '../../../../services';
+import { NavigationService } from '../../../../core/services';
 import {
   uppercaseValidator, numbersValidator,
   emailValidator, markAsTouchedAllFormInputs

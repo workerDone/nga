@@ -21,13 +21,7 @@ export class ServicesModule {
     return {
       ngModule: ServicesModule,
       providers: [
-        // ApiService,
-        // JwtService,
         NavigationService,
-        // SettingsService,
-        // UserService,
-        // AuthService,
-        // ContributionsService,
       ]
     };
   }

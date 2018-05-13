@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 import { Router } from '@angular/router';
 
-import { RoutePaths } from '../../core/dictionaries'
+import { RoutePaths } from '../../dictionaries';
 
 
 @Injectable()
