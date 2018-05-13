@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { RoutePaths } from './core/dictionaries'
+import { RoutePaths } from './core/dictionaries';
 
 const routes: Routes = [
   {
